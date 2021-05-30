@@ -1,3 +1,4 @@
+import 'package:final_project/Screens/Dashboard/dashboard_screen.dart';
 import 'package:final_project/Screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project/constans.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: LoginScreen(),
+      home: DashboardScreen(),
+      // home: LoginScreen(),
     );
   }
 }
