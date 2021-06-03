@@ -1,5 +1,7 @@
 import 'package:final_project/Screens/Dashboard/components/bottom_nav_bar.dart';
 import 'package:final_project/Screens/Dashboard/components/menu_card.dart';
+import 'package:final_project/Screens/Login/login_screen.dart';
+import 'package:final_project/Screens/Profile/profile_screen.dart';
 import 'package:final_project/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -50,16 +52,29 @@ class HomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topRight,
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 52,
-                      width: 52,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF620AA1),
-                        // color: Color(0xFFF2BEA1),
-                        shape: BoxShape.circle,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return LoginScreen();
+                          }),
+                        );
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 42,
+                        width: 42,
+                        decoration: BoxDecoration(
+                          // color: Color(0xFF620AA1),
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: SvgPicture.asset(
+                          "assets/icons/shutdown-30.svg",
+                          color: Colors.purple,
+                        ),
                       ),
-                      child: SvgPicture.asset("assets/icons/menu.svg"),
                     ),
                   ),
                   Text(
@@ -97,7 +112,14 @@ class HomeScreen extends StatelessWidget {
                         MenuCard(
                           svgSrc: "assets/icons/Hamburger.svg",
                           title: "Profilku",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return ProfileScreen();
+                              }),
+                            );
+                          },
                         ),
                         MenuCard(
                           svgSrc: "assets/icons/Excrecises.svg",

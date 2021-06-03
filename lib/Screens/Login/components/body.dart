@@ -1,3 +1,4 @@
+import 'package:final_project/Screens/Dashboard/dashboard_screen.dart';
 import 'package:final_project/Screens/Login/components/background.dart';
 import 'package:final_project/components/rounded_button.dart';
 import 'package:final_project/components/rounded_input_field.dart';
@@ -44,7 +45,14 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return DashboardScreen();
+                  }),
+                );
+              },
             )
           ],
         ),

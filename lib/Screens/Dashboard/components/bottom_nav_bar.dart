@@ -1,4 +1,5 @@
 import 'package:final_project/Screens/Dashboard/components/bottom_nav_item.dart';
+import 'package:final_project/Screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -13,22 +14,22 @@ class BottomNavBar extends StatelessWidget {
         horizontal: 20,
         vertical: 10,
       ),
-      height: 80,
+      height: 75,
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          BottomNavItem(
-            svgSrc: "assets/icons/gym.svg",
-            title: "Dashboard",
-            press: () {},
-            isActive: true,
-          ),
+          // BottomNavItem(
+          //   svgSrc: "assets/icons/gym.svg",
+          //   title: "Dashboard",
+          //   press: () {},
+          //   isActive: true,
+          // ),
           BottomNavItem(
             svgSrc: "assets/icons/Settings.svg",
             title: "Profilku",
             press: () {},
-            isActive: false,
+            isActive: true,
           ),
           BottomNavItem(
             svgSrc: "assets/icons/calendar.svg",
@@ -40,6 +41,18 @@ class BottomNavBar extends StatelessWidget {
             svgSrc: "assets/icons/Settings.svg",
             title: "KHS",
             press: () {},
+          ),
+          BottomNavItem(
+            svgSrc: "assets/icons/Settings.svg",
+            title: "Tentang",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
+                }),
+              );
+            },
           ),
         ],
       ),
