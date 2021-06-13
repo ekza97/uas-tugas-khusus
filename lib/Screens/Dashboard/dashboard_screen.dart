@@ -1,5 +1,6 @@
 import 'package:final_project/Screens/Dashboard/components/bottom_nav_bar.dart';
 import 'package:final_project/Screens/Dashboard/components/menu_card.dart';
+import 'package:final_project/Screens/Khs/khs_screen.dart';
 import 'package:final_project/Screens/Login/login_screen.dart';
 import 'package:final_project/Screens/Profile/profile_screen.dart';
 import 'package:final_project/constans.dart';
@@ -129,7 +130,14 @@ class HomeScreen extends StatelessWidget {
                         MenuCard(
                           svgSrc: "assets/icons/Meditation.svg",
                           title: "KHS",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return KhsScreen();
+                              }),
+                            );
+                          },
                         ),
                         MenuCard(
                           svgSrc: "assets/icons/yoga.svg",
