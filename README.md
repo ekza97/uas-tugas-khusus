@@ -1,16 +1,12 @@
-# final_project
+# KELOMPOK 7
 
-A new Flutter project.
+Final Project UAS Tugas Khusus
 
-## Getting Started
+## Nama Kelompok
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Eka Saputra (202065053)
+- Clara Amalia Ismayanti (201965056)
+- Arin Nofianti (201965042)
+- Noel Carnitos Padang Kende (201965025)
+- Jubita (201965053)
+- Juliah Anggraeni (201965039)
