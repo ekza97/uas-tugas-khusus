@@ -1,5 +1,9 @@
+import 'package:final_project/Screens/About/about_screen.dart';
 import 'package:final_project/Screens/Dashboard/components/bottom_nav_item.dart';
+import 'package:final_project/Screens/Khs/khs_semester.dart';
+import 'package:final_project/Screens/Krs/krs_screen.dart';
 import 'package:final_project/Screens/Login/login_screen.dart';
+import 'package:final_project/Screens/Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -28,19 +32,40 @@ class BottomNavBar extends StatelessWidget {
           BottomNavItem(
             svgSrc: "assets/icons/Settings.svg",
             title: "Profilku",
-            press: () {},
-            isActive: true,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return ProfileScreen();
+                }),
+              );
+            },
+            isActive: false,
           ),
           BottomNavItem(
             svgSrc: "assets/icons/calendar.svg",
             title: "KRS",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return KrsScreen();
+                }),
+              );
+            },
             isActive: false,
           ),
           BottomNavItem(
             svgSrc: "assets/icons/Settings.svg",
             title: "KHS",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return KhsSemester();
+                }),
+              );
+            },
           ),
           BottomNavItem(
             svgSrc: "assets/icons/Settings.svg",
@@ -49,7 +74,7 @@ class BottomNavBar extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return LoginScreen();
+                  return AboutScreen();
                 }),
               );
             },

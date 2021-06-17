@@ -1,6 +1,6 @@
+import 'package:final_project/Screens/About/about_screen.dart';
 import 'package:final_project/Screens/Dashboard/components/bottom_nav_bar.dart';
 import 'package:final_project/Screens/Dashboard/components/menu_card.dart';
-import 'package:final_project/Screens/Khs/khs_screen.dart';
 import 'package:final_project/Screens/Khs/khs_semester.dart';
 import 'package:final_project/Screens/Krs/krs_screen.dart';
 import 'package:final_project/Screens/Login/login_screen.dart';
@@ -125,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         MenuCard(
-                          svgSrc: "assets/icons/Excrecises.svg",
+                          svgSrc: "assets/icons/Hamburger.svg",
                           title: "KRS",
                           press: () {
                             Navigator.push(
@@ -137,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         MenuCard(
-                          svgSrc: "assets/icons/Meditation.svg",
+                          svgSrc: "assets/icons/Hamburger.svg",
                           title: "KHS",
                           press: () {
                             Navigator.push(
@@ -149,9 +149,16 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                         MenuCard(
-                          svgSrc: "assets/icons/yoga.svg",
+                          svgSrc: "assets/icons/Hamburger.svg",
                           title: "Tentang",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return AboutScreen();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
