@@ -1,4 +1,6 @@
 import 'package:final_project/Screens/Dashboard/dashboard_screen.dart';
+import 'package:final_project/Screens/Khs/khs_semester.dart';
+import 'package:final_project/Screens/Krs/components/krs_button.dart';
 import 'package:final_project/constans.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +30,7 @@ class KhsScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return DashboardScreen();
+                  return KhsSemester();
                 }),
               );
             },
@@ -132,6 +134,13 @@ class KhsScreen extends StatelessWidget {
                 backColor: Colors.white,
                 height: 52,
                 textColor: Colors.blue,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              KrsButton(
+                text: "CETAK",
+                press: () {},
               ),
             ],
           ),

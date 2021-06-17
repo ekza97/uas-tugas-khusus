@@ -1,6 +1,8 @@
 import 'package:final_project/Screens/Dashboard/components/bottom_nav_bar.dart';
 import 'package:final_project/Screens/Dashboard/components/menu_card.dart';
 import 'package:final_project/Screens/Khs/khs_screen.dart';
+import 'package:final_project/Screens/Khs/khs_semester.dart';
+import 'package:final_project/Screens/Krs/krs_screen.dart';
 import 'package:final_project/Screens/Login/login_screen.dart';
 import 'package:final_project/Screens/Profile/profile_screen.dart';
 import 'package:final_project/constans.dart';
@@ -125,7 +127,14 @@ class HomeScreen extends StatelessWidget {
                         MenuCard(
                           svgSrc: "assets/icons/Excrecises.svg",
                           title: "KRS",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return KrsScreen();
+                              }),
+                            );
+                          },
                         ),
                         MenuCard(
                           svgSrc: "assets/icons/Meditation.svg",
@@ -134,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) {
-                                return KhsScreen();
+                                return KhsSemester();
                               }),
                             );
                           },
